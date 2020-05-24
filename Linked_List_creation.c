@@ -18,7 +18,7 @@ start=NULL;
 ptr=NULL;
 for(int i=0;i<n;i++)
 {
-new1=( struct node*)malloc(sizeof(struct node));
+new1=( struct node*)malloc(sizeof(struct node)); /* Always allocate memory for a node inside a loop */
 printf("enter the element\n");
 scanf("%d",&new1->info);
 new1->link = NULL;
@@ -52,7 +52,7 @@ while(ptr != NULL)
 
 char choice;
 printf("\n Do you want to know the sum & average of all LL elements ? y/n \n");
-scanf(" %c",&choice);
+scanf(" %c",&choice);   /* keep space before %c else choice will behave like an int (ascii) value */
 if (choice == 'y')
 {
 int sum=0, count=0;
@@ -64,7 +64,7 @@ while(ptr != NULL)
     ptr=ptr->link;
 }
 
-double avg=(float)sum/(float)count;
+double avg=(float)sum/(float)count;  /* note the data type casting */
 printf("the sum is:%d\n",sum);
 printf("the average is:%f\n",avg);
 }
