@@ -1,2 +1,2 @@
 # Fun-programs
-Simple fun programs written by me related to Data Structures &amp; Algorithms
+Simple fun programs related to Data Structures &amp; Algorithms, written by me.
